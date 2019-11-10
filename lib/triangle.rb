@@ -8,7 +8,7 @@ attr_accessor :s1, :s2, :s3
   end
   
   def kind
-    if (s1*s2*s3) == 0 || (s1 + s2) <= s3 || (s2 + s3) <= s1 || (s2 + s1) <= s3
+    if (s1*s2*s3) == 0 || (s1 + s2) <= s3 || (s2 + s3) <= s1 || (s3 + s1) <= s2
       
       # raise
       begin
@@ -22,7 +22,7 @@ attr_accessor :s1, :s2, :s3
     elsif s1 == s2 || s1 == s3 || s2 == s3
       :isosceles
       
-    elsif s1 != s2 && s1 != s3 && s2 != s3
+    else #s1 != s2 && s1 != s3 && s2 != s3
       :scalene
       
       
@@ -34,7 +34,6 @@ attr_accessor :s1, :s2, :s3
   end
   
   class TriangleError < StandardError
-    # triangle error code
   end
   
 end

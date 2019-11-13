@@ -15,10 +15,10 @@ class Triangle
       
     if @a == @b && @b == @c
       :equilateral
-    elsif (@a == @b && @b != @c) || (@a != @b && @b == @c) || (@a == @c && @b != @c)
-      :isosceles
     elsif (@a != @b) && (@b != @c) && (@a != @c)
       :scalene
+    else
+      :isosceles
     end
   end
   
